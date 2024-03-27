@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-       app = docker.build("Nikyuuu/devops-blueocean-labs")
+       app = docker.build("Nikyuuu/devops-jenkins-labs")
     }
     stage('Push image') {   
         docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
